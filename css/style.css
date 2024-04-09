@@ -483,3 +483,26 @@ textarea {
 .filtroContenedor ul li {
   list-style: none;
 }
+
+/* Zoom productos */
+
+.conteinerPhotoProduct {
+  display: flex;
+  justify-content: center;
+}
+
+figure.zoom {
+  background-position: 50% 50%;
+  position: relative;
+  width: 700px;
+  overflow: hidden;
+  cursor: default;
+}
+figure.zoom img:hover {
+  opacity: 0;
+}
+figure.zoom img {
+  transition: opacity 0.5s;
+  display: block;
+  width: 100%;
+}
