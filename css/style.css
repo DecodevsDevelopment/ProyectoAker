@@ -97,6 +97,7 @@ body::-webkit-scrollbar-track {
 }
 .carousel {
   margin-bottom: 150px;
+  width: 100%;
 }
 .cards {
   display: flex;
@@ -486,23 +487,38 @@ textarea {
 
 /* Zoom productos */
 
-.conteinerPhotoProduct {
+.carouselPhoto{
+  width: 60%;
+  height: 60%;
   display: flex;
   justify-content: center;
 }
 
-figure.zoom {
+.carouselPhotoInner{
+  margin-left: 80px;
+}
+.zoom {
   background-position: 50% 50%;
   position: relative;
-  width: 700px;
+  width: 90%;
   overflow: hidden;
   cursor: default;
-}
-figure.zoom img:hover {
+} 
+
+
+.image1:hover {
   opacity: 0;
 }
-figure.zoom img {
+.image1 {
   transition: opacity 0.5s;
   display: block;
   width: 100%;
+} 
+.image2 {
+  transition: opacity 0.5s;
+  display: block;
+  width: 100%;
+} 
+.image2:hover {
+  opacity: 0;
 }

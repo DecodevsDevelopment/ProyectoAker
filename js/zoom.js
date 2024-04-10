@@ -6,3 +6,4 @@ function zoom(e) {
   y = (offsetY / zoom.offsetHeight) * 100;
   zoom.style.backgroundPosition = x + "% " + y + "%";
 }
+
