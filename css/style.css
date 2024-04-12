@@ -526,7 +526,7 @@ textarea {
 /* Boton Comprar */
 
 .compra {
-  height: 15%;
+  height: 25%;
   width: 40%;
   background-color: #80ED99;
   border-radius: 5px;
@@ -539,4 +539,8 @@ textarea {
   font-family: sans-serif;
   text-align: left;
   
+}
+.logo {
+  height: 60px;
+  width: 100px;
 }
