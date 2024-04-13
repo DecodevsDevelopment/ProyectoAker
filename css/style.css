@@ -523,17 +523,8 @@ textarea {
   opacity: 0;
 }
 
-/* Boton Comprar */
+/* Logo Ovorex */
 
-.compra {
-  height: 25%;
-  width: 40%;
-  background-color: #80ED99;
-  border-radius: 5px;
-  margin: 15px;
-  margin-left: 75px;
-  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
-}
 .logo {
   height: 60px;
   width: 100px;
