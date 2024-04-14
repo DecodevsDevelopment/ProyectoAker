@@ -535,11 +535,10 @@ textarea {
   margin: 5% 0 0 0;
   position: sticky;
   height: max-content;
-  
   top: 12.5%;
   display: flex;
   justify-content: end;
-    padding: 16px 16px 0;
+  padding: 16px 16px 0;
 
 }
 
@@ -593,17 +592,22 @@ textarea {
 
 .boxTextPho{
   width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 .boxPhoto{
   margin: 3%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .photoCitrato{
-  width: 100%;
+  width: 70%;
   margin-bottom: 3%;
 }
 .photoCitrato2{
-  width: 100%;
+  width: 70%;
 }
 /* Logo Ovorex */
 
