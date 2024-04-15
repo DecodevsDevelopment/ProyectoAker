@@ -621,6 +621,7 @@ textarea {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  
 }
 
 .formu .quantity{
@@ -629,6 +630,7 @@ textarea {
   align-items: center;
   width: 42%;
   
+  
 }
 .formu .quantity .textQuantity{
   font-family: "Roboto", sans-serif;
@@ -636,6 +638,7 @@ textarea {
 .quantity .numberQuantity{
   width: 70%;
   text-align: center;
+  border-radius: 5px;
 }
 /* Boton comprar */
 .cartButton{
@@ -706,4 +709,25 @@ textarea {
 .CartBtn:active {
   transform: scale(0.95);
   transition-duration: .5s;
+}
+
+/* Codigo postal */
+.input-group {
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+
+.envio {
+  margin: 0 0 0 15px;
+  border-radius: 5px;
+  width: 45%;  
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.cp {
+  margin: 0 30px 0 0;
+  border-radius: 5px;
+  width: 40%;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
