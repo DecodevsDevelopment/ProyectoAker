@@ -1,0 +1,473 @@
+/* General */
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar {
+  height: 0.65rem;
+  width: 0.62rem;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: #8c8c88;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #595956;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
+/* Navbar */
+.navbar {
+  background-color: grey;
+  margin-bottom: 30px;
+}
+.navbar .navbar-nav .nav-link {
+  position: relative;
+}
+.navbar .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #ffc300;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out 0s;
+}
+.navbar-nav .nav-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.navbar .container-fluid .navbar-collapse {
+  flex-grow: 0;
+  background-color: grey;
+}
+
+.navbar .container-fluid .navbar-collapse .navbar-nav {
+  float: right;
+}
+
+.search {
+  position: absolute;
+  left: 40%;
+  width: 300px;
+}
+
+.icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  display: block;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  user-select: none;
+  cursor: pointer;
+}
+/* Titulo index */
+.tit1 {
+  display: flex;
+  margin-top: 85px;
+  margin-bottom: 0px;
+}
+.tit1 .titulo1 {
+  font-family: "Roboto";
+  font-size: 50px;
+}
+/* Cards index */
+.textBox {
+  max-width: 52ch;
+  padding: 1em;
+  line-height: 1.5;
+  font-family: "Roboto";
+}
+.carousel {
+  margin-bottom: 150px;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 6rem 0;
+  gap: 1.2em;
+  justify-content: center;
+}
+.cardInfo {
+  display: flex;
+  max-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
+}
+
+.imgCard {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.3em;
+  background-position: center;
+  background-size: cover;
+}
+
+.card:nth-of-type(1) .imgCard {
+  background-image: url(/img/OVOREX-1.webp);
+  background-size: cover;
+}
+/* Card de producto */
+.containerProduct {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.containerProduct .tarjetas {
+  width: 100%;
+  margin: 22px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+.tarjetas .tarjeta {
+  width: 100%;
+  margin: 0px 219px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+.tarjeta .cardProduct {
+  margin-top: 80px;
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  padding: 0.8em;
+  background: #f9f9f9;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 70px 70px rgba(0, 0, 0, 0.4);
+  transition: 0.5s all;
+}
+.tarjeta .cardProduct:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.5s all;
+  transform: translateY(-3%);
+}
+.tarjeta .cardProduct .cardImgProduct {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.tarjeta .cardProduct .cardImgProduct img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  max-width: 200px;
+  /* filter: brightness(1.1); */
+  mix-blend-mode: multiply;
+}
+.tarjeta .cardProduct .card-info {
+  padding-top: 10%;
+}
+.tarjeta .cardProduct .card-info .text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+}
+.tarjeta .cardProduct .card-info .text-body {
+  font-size: 0.9em;
+  padding-bottom: 10px;
+  height: 100px;
+  word-wrap: break-word;
+  margin-bottom: 40px;
+}
+.tarjeta .cardProduct .card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+.tarjeta .cardProduct .card-footer .text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+.tarjeta .cardProduct .card-footer .card-button {
+  border: 1px solid #252525;
+  display: flex;
+  padding: 0.3em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+.tarjeta .cardProduct .card-footer .card-button svg {
+  width: 20px;
+  height: 20px;
+}
+.tarjeta .cardProduct .card-footer .card-button:hover {
+  border: 1px solid #ffcaa6;
+  background-color: #ffcaa6;
+}
+
+/* Formulario contacto*/
+.formularioContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 130px;
+}
+.formularioContacto .formulario {
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  padding: 30px 40px;
+  box-shadow: 0 70px 70px 40px rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+}
+.formularioContacto .formulario .title {
+  font-size: 2em;
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.formularioContacto .formulario .inputContainer {
+  position: relative;
+  width: 90%;
+  height: 45px;
+  margin-bottom: 45px;
+}
+.formularioContacto .formulario .inputContainer .input {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dadce0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  min-width: none;
+  z-index: 1;
+}
+
+.formularioContacto .formulario .inputContainer.error .input .i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.inputContainer.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+.formularioContacto .formulario .inputContainer .input::placeholder {
+  color: transparent;
+}
+.formularioContacto .formulario .inputContainer .input:focus + .label {
+  top: -8px;
+  left: 3px;
+  z-index: 10;
+  font-weight: 20px;
+  font-size: 14px;
+  color: purple;
+}
+.formularioContacto .formulario .inputContainer .input:focus {
+  margin-bottom: 20px;
+  border: 2px solid purple;
+}
+.formularioContacto .formulario .inputContainer .input:not(:placeholder-shown) + .label {
+  top: -8px;
+  left: 3px;
+  z-index: 10;
+  font-weight: 20px;
+  font-size: 14px;
+}
+.formularioContacto .formulario .inputContainer .label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: white;
+  color: #9867c5;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+textarea {
+  min-width: 100%;
+  resize: vertical;
+  min-height: 60px;
+  max-height: 80px;
+  font-family: "Roboto", sans-serif;
+}
+.formularioContacto .formulario .submitBtn {
+  display: block;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+.formularioContacto .formulario .submitBtn:hover {
+  background-color: #9867c5;
+  transform: translateY(-2px);
+}
+
+/* mensaje de error validacion contacto */
+.inputContainer.error input {
+  border-color: #e74c3c;
+}
+.inputContainer small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 60px;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.inputContainer.error small {
+  visibility: visible;
+}
+/* Footer */
+.container__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.box__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  overflow-x: hidden;
+}
+
+.box__footer .logo img {
+  width: 100px;
+  justify-content: center;
+}
+
+.box__footer .terms {
+  max-width: 350px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.box__footer h2 {
+  margin-bottom: 30px;
+  color: #000000;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.box__footer a {
+  margin-top: 10px;
+  color: #000000;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.box__footer a:hover {
+  opacity: 0.8;
+}
+.box__copyright {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.box__copyright p {
+  margin-top: 20px;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+.box__copyright hr {
+  border: none;
+  height: 1px;
+  background-color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+.iconoinsta {
+  width: 54px;
+  height: 54px;
+}
+.iconowp {
+  width: 54px;
+  height: 54px;
+  margin-top: 10px;
+}
+.fontIndex {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  color: #fff;
+}
+/* Parallax  index*/
+
+#teAyudamos {
+  padding: 7rem 0;
+  background: url(https://scontent.fsfn6-1.fna.fbcdn.net/v/t1.6435-9/170154987_161065339221867_688646990340353770_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=RbCxkcixbR4Ab7ixIGn&_nc_ht=scontent.fsfn6-1.fna&oh=00_AfDQHnGB10lIlTOYAkyUmIMbTdiCU5S-j444RV3_MrJNdw&oe=66369E59)
+    center center / cover no-repeat fixed;
+}
+
+/* Filtro */
+
+.filtroContenedor {
+  margin-top: 1px;
+  margin-right: 96px;
+  width: 194px;
+  height: 200px;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.filtroContenedor ul li {
+  list-style: none;
+}
