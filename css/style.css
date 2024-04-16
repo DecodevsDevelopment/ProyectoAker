@@ -78,6 +78,15 @@ body::-webkit-scrollbar-track {
   user-select: none;
   cursor: pointer;
 }
+.card-button-navbar{
+  display: flex;
+  padding: 0.3em;
+  cursor: pointer;
+}
+.svg-icon-navbar{
+ width: 20px;
+  height: 20px;
+}
 /* Titulo index */
 .tit1 {
   display: flex;
@@ -804,21 +813,45 @@ textarea {
 }
 /* Codigo postal */
 .input-group {
+  
   justify-content: space-evenly;
   border-radius: 5px;
 }
 
-.envio {
+.input-group .envio {
   margin: 0 0 0 15px;
-  border-radius: 5px;
+  border-radius: 5px !important;
   width: 45%;  
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.cp {
+.input-group .cp {
   margin: 0 30px 0 0;
-  border-radius: 5px;
+  border-radius: 5px !important;
   width: 40%;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+.card-button-navbar{
+  position: relative;
+}
+.carrito{
+  width: 20px;
+  height: 20px;
+}
+.mostrar{
+  position: absolute;
+  background-color: yellow;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  top: 0;
+  left: 1rem;
+}
+
