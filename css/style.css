@@ -64,7 +64,7 @@ body::-webkit-scrollbar-track {
 
 .search {
   position: absolute;
-  left: 40%;
+  left: 42%;
   width: 300px;
 }
 
@@ -854,4 +854,28 @@ textarea {
   top: 0;
   left: 1rem;
 }
-
+.boxCarrito{
+  display: flex;
+  justify-content: space-evenly;
+}
+.boxCarrito .imgCarrito{
+  width: 10%;
+  height: 10%;
+  margin: 0;
+}
+.boxCarrito .textCarrito{
+  height: 10%;
+  align-self: center;
+  margin: 0;
+}
+.boxCarrito .quantityCarrito{
+  width: 16%;
+  height: 10%;
+  align-self: center;
+}
+.boxCarrito .quantityCarrito .numberQuantityCarrito{
+  width: 28%;
+  height: 10%;
+  align-self: center;
+  border-radius: 5px;
+}
