@@ -257,7 +257,7 @@ body::-webkit-scrollbar-track {
 .modal {
   justify-content: center;
   position: fixed; 
-  padding-top: 200px; 
+  padding-top: 68px; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -854,9 +854,14 @@ textarea {
   top: 0;
   left: 1rem;
 }
+.boxCarro{
+  display: flex;
+  flex-direction: column;
+}
 .boxCarrito{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 3%;
 }
 .boxCarrito .imgCarrito{
   width: 10%;
@@ -879,6 +884,7 @@ textarea {
   align-self: center;
   border:#000 solid 1px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .buy{
