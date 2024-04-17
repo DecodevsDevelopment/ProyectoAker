@@ -632,7 +632,6 @@ textarea {
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   margin-bottom: 20px;
-  margin-top: 15px;
 }
 .contenedor .tabla .price {
   font-family: "Roboto", sans-serif;
@@ -662,7 +661,12 @@ textarea {
   justify-content: center;
   flex-wrap: wrap;
 }
-
+.TextProtein{
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  width: 30%;
+}
 .photoCitrato{
   width: 70%;
   margin-bottom: 3%;

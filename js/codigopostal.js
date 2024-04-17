@@ -9,8 +9,8 @@ calcularEnvioButton.addEventListener('click', () => {
   // (en este ejemplo se utiliza un valor fijo)
   let costoEnvio = 50;
 
-  if (codigoPostal === 'C1000') {
-    costoEnvio = 20; // Envío gratuito para este código postal
+  if (codigoPostal === '3000') {
+    costoEnvio = 6000; // Envío gratuito para este código postal
   }
 
   costoEnvioParrafo.textContent = `Costo de envío: $${costoEnvio}`;
