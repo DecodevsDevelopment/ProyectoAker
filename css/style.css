@@ -100,11 +100,10 @@ body::-webkit-scrollbar-track {
 
 /* Titulo productos */
 .tit2 {
-  display: flex;
-  margin-top: 85px;
+  margin-top: 110px;
   margin-bottom: 0px;
 }
-.tit1 .titulo2 {
+.tit2 .titulo2 {
   font-family: "Roboto";
   font-size: 50px;
 }
@@ -463,11 +462,13 @@ textarea {
 
 .box__footer {
   display: flex;
-  flex-direction: column;
+  width: 100%;
   padding: 70px;
   overflow-x: hidden;
 }
-
+.boxRedes{
+  width: 27%;
+}
 .box__footer .logo img {
   width: 100px;
   justify-content: center;
@@ -481,23 +482,34 @@ textarea {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
 }
-
+.boxRedes{
+  width: 29%;
+}
 .box__footer h2 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: #000000;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
 }
 
 .box__footer a {
-  margin-top: 10px;
+  width: 54px;
+  height: 54px; 
+  display: inline-flex;
+  margin: 10px 15px 0 0;;
   color: #000000;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
+ 
 }
 
 .box__footer a:hover {
   opacity: 0.8;
+}
+.maps{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 .box__copyright {
   max-width: 1200px;
@@ -547,7 +559,7 @@ textarea {
   justify-content: center;
 }
 .filtroContenedor {
-  margin-top: 53px;
+  margin-top: 30px;
   margin-right: 20px;
   width: 200px;
   height: 44px;
