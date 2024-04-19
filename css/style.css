@@ -542,25 +542,34 @@ textarea {
 }
 
 /* Filtro */
-
+.filtro{
+  display: flex;
+  justify-content: center;
+}
 .filtroContenedor {
-  margin-top: 1px;
-  margin-right: 96px;
-  width: 194px;
-  height: 200px;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  margin-top: 53px;
+  margin-right: 20px;
+  width: 200px;
+  height: 44px;
   justify-content: flex-start;
-  flex-direction: column;
   padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+
+}
+.textFiltro{
+  display: flex;
+  justify-content: center;
+}
+.filtroContenedor select {
+  width: 100%;
+  border: 3px solid rgba(67,67,67,.2);
+  font-size: 12px;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
 }
-.filtroContenedor ul li {
-  list-style: none;
-}
+
+
 
 /* Zoom productos */
 .conteinerTable{
