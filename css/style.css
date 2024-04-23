@@ -1001,19 +1001,247 @@ margin: 0 0 0 18%;
 
 
 
-@media (min-width: 767px) and (max-width: 1600px){
+@media screen and (min-width: 1025px){
 .btn{
   display: none;
 }
+.filtro2{
+  display: ruby;
+  width: 29%;
+  margin: 39px 0 0 0;
+}
+.containerProduct2 {
+  width: 90%;
+  display: flex;
+}
+.filtroContenedor2 {
+  margin-top: 30px;
+  width: 200px;
+  height: 44px;
+  justify-content: flex-start;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+
+}
+.filtroContenedor2 ul{
+  list-style: none;
+}
+.listFiltro {
+  margin-bottom: 5px;
 }
 
-@media screen and (max-width: 766px) {
+.listFiltro a{
+  color: #434343;
+  text-decoration: none;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width:1024px){
 .filtro2{
+  display: none;
+}
+
+.containerProduct .tarjetas{
+  margin: 22px 0 0 0 ;
+  height: max-content;
+  width: 100%;
+}
+
+.containerProduct .tarjetas .tarjeta {
+  margin: 22px 0 0 0 ;
+  height: max-content;
+  width: 100%;
+}
+.tarjeta .cardProduct{
+  width: 44%;
+  height: max-content;
+  padding: 0.3em;
+  
+}
+.tarjeta .cardProduct .card-info{
+  font-size: 11px;
+  width: 100%;
+}
+.tarjeta .cardProduct .card-footer{
+  font-size: 10px;
+}
+.filtro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+}
+.filtro2{
+  display: none;
+}
+.filtroContenedor{
+  margin-top: 37px;
+  width: 36%;
+  height: 86px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.filtroContenedor select{
+  width: 90%;
+  border: 3px solid rgba(67, 67, 67, .2);
+  font-size: 12px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.boxFilter{
+  width: 89%;
+  text-align: center;
+}
+.btn{
+  width: 36%;
+  height: 34%;
+}
+.modal-dialog {
+  height: 100%;
+}
+.modal-dialog .modal-content{
+  height: 100%;
+}
+.filtroContenedor2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 0 60% 0;
+  width: 133px;
+  height: 44px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.catFiltro{
+  padding: 0;
+  font-size: 16px;
+}
+.listFiltro{
+  font-size: 14px;
+}
+
+.box__footer{
+  padding: 0;
+  flex-direction: column;
+}
+.container__footer .box__footer .boxRedes{
+  margin-bottom: 27%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.maps{
+  display: flex;
+  justify-content: center;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+.containerProduct .tarjetas{
+  margin: 22px 0 0 0 ;
+  height: max-content;
+  width: 100%;
+}
+
+.containerProduct .tarjetas .tarjeta {
+  margin: 22px 0 0 0 ;
+  height: max-content;
+  width: 100%;
+}
+.tarjeta .cardProduct{
+  width: 44%;
+  height: max-content;
+  padding: 0.3em;
+  
+}
+.tarjeta .cardProduct .card-info{
+  font-size: 11px;
+  width: 100%;
+}
+.tarjeta .cardProduct .card-footer{
+  font-size: 10px;
+}
+.filtro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+}
+.filtro2{
+  display: none;
+}
+.filtroContenedor{
+  margin-top: 37px;
+  width: 35%;
+  height: 86px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.filtroContenedor select{
+  width: 90%;
+  border: 3px solid rgba(67, 67, 67, .2);
+  font-size: 12px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.boxFilter{
+  width: 89%;
+  text-align: center;
+}
+.btn{
+  width: 35%;
+  height: 34%;
+}
+.modal-dialog {
+  height: 100%;
+}
+.modal-dialog .modal-content{
+  height: 100%;
+}
+.filtroContenedor2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 0 60% 0;
+  width: 133px;
+  height: 44px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.catFiltro{
+  padding: 0;
+  font-size: 16px;
+}
+.listFiltro{
+  font-size: 14px;
+}
+
+.box__footer{
+  padding: 0;
+  flex-direction: column;
+}
+.container__footer .box__footer .boxRedes{
+  margin-bottom: 27%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.maps{
+  display: flex;
+  justify-content: center;
+}
+  .filtro2{
   display: none;
 }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
  .tit1 .titulo1{
   font-size: 44px;
  }
@@ -1083,7 +1311,7 @@ margin: 0 0 0 18%;
 }
 .filtroContenedor{
   margin-top: 37px;
-  width: 50%;
+  width: 35%;
   height: 86px;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
@@ -1101,7 +1329,7 @@ margin: 0 0 0 18%;
   text-align: center;
 }
 .btn{
-  width: 44%;
+  width: 35%;
   height: 34%;
 }
 .modal-dialog {
