@@ -862,45 +862,7 @@ margin: 0 0 0 18%;
   transition-duration: .5s;
 }
 /* Carrito Navbar */
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  color: rgb(27, 27, 27);
-  padding: 10px 30px;
-  border: 1px solid;
-  border-radius: 1000px;
-  display: inline-block;
-  transition: all .2s;
-  position: relative;
-}
 
-.btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
-}
-
-.btn:active {
-  transform: translateY(-3px);
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  transition: all .3s;
-}
-
-.btn:hover::after {
-  background-color: #BFBFBF;
-  transform: scaleX(1.4) scaleY(1.5);
-  opacity: 0;
-}
 /* Codigo postal */
 .input-group {
   
@@ -1039,12 +1001,16 @@ margin: 0 0 0 18%;
 
 
 
-@media screen and (max-width: 1140px) {
-
+@media (min-width: 767px) and (max-width: 1600px){
+.btn{
+  display: none;
+}
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 766px) {
+.filtro2{
+  display: none;
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -1080,18 +1046,7 @@ margin: 0 0 0 18%;
   height: 310px;
   margin-bottom: 20px;
  }
-.filtroContenedor{
-  margin-top: 1px;
-  margin-right: 30px;
-  width: 194px;
-  height: 200px;
-  justify-content: flex-start;
-  flex-direction: column;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-}
+
 .containerProduct .tarjetas{
   margin: 22px 0 0 0 ;
   height: max-content;
@@ -1106,6 +1061,86 @@ margin: 0 0 0 18%;
 .tarjeta .cardProduct{
   width: 44%;
   height: max-content;
+  padding: 0.3em;
   
+}
+.tarjeta .cardProduct .card-info{
+  font-size: 11px;
+  width: 100%;
+}
+.tarjeta .cardProduct .card-footer{
+  font-size: 10px;
+}
+.filtro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+}
+.filtro2{
+  display: none;
+}
+.filtroContenedor{
+  margin-top: 37px;
+  width: 50%;
+  height: 86px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.filtroContenedor select{
+  width: 90%;
+  border: 3px solid rgba(67, 67, 67, .2);
+  font-size: 12px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.boxFilter{
+  width: 89%;
+  text-align: center;
+}
+.btn{
+  width: 44%;
+  height: 34%;
+}
+.modal-dialog {
+  height: 100%;
+}
+.modal-dialog .modal-content{
+  height: 100%;
+}
+.filtroContenedor2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 0 60% 0;
+  width: 133px;
+  height: 44px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.catFiltro{
+  padding: 0;
+  font-size: 16px;
+}
+.listFiltro{
+  font-size: 14px;
+}
+
+.box__footer{
+  padding: 0;
+  flex-direction: column;
+}
+.container__footer .box__footer .boxRedes{
+  margin-bottom: 27%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.maps{
+  display: flex;
+  justify-content: center;
 }
 }
