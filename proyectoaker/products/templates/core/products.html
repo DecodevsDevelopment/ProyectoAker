@@ -2,32 +2,72 @@
 {% load static %}
 
 {% block content %}
-<section>
-  <div class="containerProduct">
-    <aside class="filtro">
-      <div class="filtroContenedor">
-            <p>Filtrado por categorias</p>
-            <ul>
-                <li>
-                    <input type="radio" name="remera" class="categorias" id="Remeras">
-                    <label for="remeras">Remeras</label>
-                </li>
-                <li>
-                    <input type="radio" name="bermuda" class="categorias" id="Bermudas">
-                    <label for="bermudas">Bermudas</label>
-                </li>
-                <li>
-                    <input type="radio" name="zapatilla" class="categorias" id="Zapatillas">
-                    <label for="zapatillas">Zapatillas</label>
-                </li>
-                <li>
-                    <input type="radio" name="Jeans" class="categorias" id="Jeans">
-                    <label for="jeans">Jeans</label>
-                </li>
-            </ul>
+ <section>
+       <div class="tit2 container-fluid col-12 col-md-6 col-xl-6 d-flex justify-content-center">
+          <h1 class="titulo2">Aker </h1>
         </div>
-</aside>
+      </section>
+      <div class="banner">
+        <p class="textBanner">Envíos gratis en compras mayores a $39.500</p>
+      </div>
+       <div class="filtro">
+              <div class="filtroContenedor">
+                <label class="textFiltro">Ordenar por: </label>
+            <select name="selectBox">
+                <option>Seleccionar</option>
+  <option value="value1">Precio Mayor a Menor</option>
+  <option value="value2">Precio Menor a Mayor</option>
+  <option value="value3">A-Z</option>
+  <option value="value4">Z-A</option>
+</select>
+                </div>
+                </div>
+        </div>
+          <div class="containerProduct2">
+            <aside class="filtro2">
+               <div class="filtroContenedor2">
+                <h5 class="catFiltro">Categorias </h5>
+                    <ul>
+                        <li class="listFiltro">
+                            <a href="./contacto.html">Protenias</a>
 
+                        </li>
+                        <li class="listFiltro">
+                            <a href="">Keto</a>
+                        </li>
+                        <li class="listFiltro">
+                           <a href="">Pro</a>
+                        </li>
+                        <li class="listFiltro">
+                            <a href="">Veggan</a>
+                        </li>
+                        <li class="listFiltro">
+                         <a href="">Foods</a>
+                      </li>
+                    </ul>
+</div>
+<div class="filtroContenedor2">
+                <h5 class="catFiltro">Gustos </h5>
+                    <ul>
+                        <li class="listFiltro">
+                            <a href="./contacto.html">Protenias</a>
+
+                        </li>
+                        <li class="listFiltro">
+                            <a href="">Chocolate</a>
+                        </li>
+                        <li class="listFiltro">
+                           <a href="">Frutilla</a>
+                        </li>
+                        <li class="listFiltro">
+                            <a href="">Vainilla</a>
+                        </li>
+                        <li class="listFiltro">
+                         <a href="">Americana</a>
+                      </li>
+                    </ul>
+</div>
+</aside>
 
 <div class="tarjetas">
   <div class="tarjeta">
@@ -40,8 +80,11 @@
             </div>
                   <div class="card-info">
                     <p class="text-title">{{prod.title}}</p>
-                    <p class="text-body col-12 col-md-12 col-lg-12">{{prod.description}}</p>
+                    <p class="text-body col-12 col-md-12 col-lg-12"> </p>
                   </div>
+
+          
+
                           <div class="card-footer">
                               <span class="text-title">${{ prod.price|floatformat:0 }}</span>
                               <div class="card-button">
@@ -62,7 +105,9 @@
           {% endfor %}
 
   </div>
-</div>  
+</div>
+
+
 
 
 

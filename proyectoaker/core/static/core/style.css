@@ -1,4 +1,4 @@
-
+/* General */
 * {
   border: 0;
   box-sizing: border-box;
@@ -146,7 +146,7 @@ body::-webkit-scrollbar-track {
 }
 
 .card:nth-of-type(1) .imgCard {
-  
+
   background-size: cover;
 }
 .card:nth-of-type(2) .imgCard {
@@ -154,9 +154,11 @@ body::-webkit-scrollbar-track {
   background-size: cover;
 }
 .card:nth-of-type(3) .imgCard {
+
   background-size: cover;
 }
 .card:nth-of-type(4) .imgCard {
+
   background-size: cover;
 }
 /* Card de producto */
@@ -230,6 +232,7 @@ body::-webkit-scrollbar-track {
   font-size: 15px;
   padding-bottom: 10px;
   height: max-content;
+  text-wrap: balance;
   text-align: left;
   margin: 0; 
 }
@@ -361,6 +364,7 @@ body::-webkit-scrollbar-track {
   padding: 0 20px;
   outline: none;
   background: none;
+  min-width: none;
   z-index: 1;
 }
 
@@ -382,6 +386,7 @@ body::-webkit-scrollbar-track {
   top: -8px;
   left: 3px;
   z-index: 10;
+  font-weight: 20px;
   font-size: 14px;
   color: purple;
 }
@@ -393,6 +398,7 @@ body::-webkit-scrollbar-track {
   top: -8px;
   left: 3px;
   z-index: 10;
+  font-weight: 20px;
   font-size: 14px;
 }
 .formularioContacto .formulario .inputContainer .label {

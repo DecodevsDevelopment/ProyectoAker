@@ -36,11 +36,17 @@ function validateName(nombre, apellido) {
 }
 
 function enviarformulario() {
+  if (email, nombre, apellido, mensaje === ""){
+  console.log("prueba");}
+  
+else{
   form.reset();
 }
+}
+
 
 function checkInputs() {
-  // trim to remove the whitespaces
+  // trim to remove the whitespace
   let status = false;
   const nombreValue = nombre.value.trim();
   const apellidoValue = apellido.value.trim();

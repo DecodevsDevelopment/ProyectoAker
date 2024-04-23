@@ -6,7 +6,10 @@ from django.views.generic import (
         ListView,
 )
 
-
+class productDetail(ListView):
+        template_name = "core/proteinas.html"
+        context_object_name = "detailProductsList"
+        model = Producto
 
 class productsListView(ListView):
         template_name = "core/products.html"
