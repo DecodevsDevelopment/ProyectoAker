@@ -1253,7 +1253,7 @@ textarea {
     flex-direction: column;
   }
   .container__footer .box__footer .boxRedes {
-    margin-bottom: 10%;
+    margin: 12% 0 14% 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1495,7 +1495,7 @@ textarea {
     flex-direction: column;
   }
   .container__footer .box__footer .boxRedes {
-    margin-bottom: 10%;
+    margin: 12% 0 14% 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1760,7 +1760,7 @@ textarea {
     flex-direction: column;
   }
   .container__footer .box__footer .boxRedes {
-    margin: 20% 0 15% 0;
+    margin: 12% 0 14% 0;
     width: 100%;
     display: flex;
     flex-direction: column;
