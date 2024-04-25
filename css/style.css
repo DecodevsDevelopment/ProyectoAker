@@ -1005,10 +1005,7 @@ textarea {
     width: 29%;
     margin: 39px 0 0 0;
   }
-  .containerProduct2 {
-    width: 90%;
-    display: flex;
-  }
+
   .filtroContenedor2 {
     width: 145px;
     height: 210px;
@@ -1064,7 +1061,9 @@ textarea {
   .navbar .container-fluid .show .navbar-nav {
     margin-top: 53px;
   }
-
+  .containerProduct2 {
+    width: 100%;
+  }
   .containerProduct .tarjetas {
     margin: 22px 0 0 0;
     height: max-content;
@@ -1080,6 +1079,7 @@ textarea {
     width: 44%;
     height: max-content;
     padding: 0.3em;
+    margin: 7% 3% 2% 3%;
   }
   .tarjeta .cardProduct .card-info {
     font-size: 11px;
@@ -1293,6 +1293,9 @@ textarea {
   .navbar .container-fluid .show .navbar-nav {
     margin-top: 53px;
   }
+  .containerProduct2 {
+    width: 100%;
+  }
   .containerProduct .tarjetas {
     margin: 22px 0 0 0;
     height: max-content;
@@ -1305,9 +1308,10 @@ textarea {
     width: 100%;
   }
   .tarjeta .cardProduct {
-    width: 44%;
+    max-width: 42%;
     height: max-content;
     padding: 0.3em;
+    margin: 7% 4% 2% 3%;
   }
   .tarjeta .cardProduct .card-info {
     font-size: 11px;
@@ -1563,7 +1567,9 @@ textarea {
     height: 310px;
     margin-bottom: 20px;
   }
-
+  .containerProduct2 {
+    width: 100%;
+  }
   .containerProduct .tarjetas {
     margin: 22px 0 0 0;
     height: max-content;
@@ -1576,10 +1582,12 @@ textarea {
     width: 100%;
   }
   .tarjeta .cardProduct {
-    width: 44%;
+    max-width: 42%;
     height: max-content;
     padding: 0.3em;
+    margin: 7% 4% 2% 3%;
   }
+
   .tarjeta .cardProduct .card-info {
     font-size: 11px;
     width: 100%;
