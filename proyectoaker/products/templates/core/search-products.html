@@ -89,7 +89,7 @@
                         <ul>
                             {% for cat in categories %}
                                 <li class="listFiltro">
-                                    <a href="?categoria={{ cat.name }}">{{ cat.name }}</a>
+                                    <a href="?categoria={{ cat.name }}">{{ cat.name }}</a>{% csrf_token %}
                                 </li>
                             {% endfor %}
                         </ul>

@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.views.generic import (
         TemplateView,
         ListView,
+        DetailView,
 )
 
 
@@ -59,9 +60,16 @@ class productsListByKword(ListView):
 
 
 
-
-class productDetail(ListView):
-        template_name = "core/proteinas.html"
-        context_object_name = "detailProductsList"
+#View del detalle de cada producto
+class productDetail(DetailView):
+        template_name = "core/product-detail.html"
         model = Producto
+
+        def get_context_data(self, **kwargs):
+                context = super(productDetail, self).get_context_data(**kwargs)
+                context['title'] = 'Keto'
+
+                return context
+
+
 
