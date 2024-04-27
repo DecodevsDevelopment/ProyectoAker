@@ -89,8 +89,8 @@ body::-webkit-scrollbar-track {
 /* Titulo index */
 .tit1 {
   display: flex;
-  margin-top: 103px;
-  margin-bottom: 15px;
+  justify-content: center;
+  margin: 103px auto 15px auto;
 }
 .tit1 .titulo1 {
   font-family: "Roboto";
@@ -99,8 +99,7 @@ body::-webkit-scrollbar-track {
 
 /* Titulo productos */
 .tit2 {
-  margin-top: 85px;
-  margin-bottom: 0px;
+  margin: 103px auto 0 auto;
 }
 .tit2 .titulo2 {
   font-family: "Roboto";
@@ -178,13 +177,10 @@ body::-webkit-scrollbar-track {
   margin: 0 0 0 0;
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap;
 }
 .tarjeta .cardProduct {
-  margin-top: 7%;
-  margin-right: 3%;
-  margin-left: 3%;
+  margin: 7% 3% 0 3%;
   width: 80%;
   max-width: 300px;
   height: auto;
@@ -424,7 +420,6 @@ textarea {
 }
 .formularioContacto .formulario .submitBtn {
   display: block;
-  margin-left: auto;
   padding: 15px 30px;
   border: none;
   background-color: purple;
@@ -432,9 +427,7 @@ textarea {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
+  margin: 87px auto 0 auto;
 }
 .formularioContacto .formulario .submitBtn:hover {
   background-color: #9867c5;
@@ -454,7 +447,9 @@ textarea {
   font-size: 12px;
   visibility: hidden;
 }
-
+.inputContainer .error2 {
+  top: 87px;
+}
 .inputContainer.error small {
   visibility: visible;
 }
@@ -563,8 +558,7 @@ textarea {
   text-align: center;
   background-color: #3d3d3d;
   color: #fff;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 0 5px 0;
 }
 .textBanner {
   margin: 0;
@@ -1598,7 +1592,6 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin: 0;
   }
   .filtro2 {
