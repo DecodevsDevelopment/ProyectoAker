@@ -741,10 +741,12 @@ textarea {
 }
 .photoCitrato {
   width: 70%;
+  height: max-content;
   margin-bottom: 3%;
 }
 .photoCitrato2 {
   width: 70%;
+  height: max-content;
 }
 /* Logo Ovorex */
 
@@ -1233,10 +1235,12 @@ textarea {
   }
   .photoCitrato {
     width: 100%;
+    height: max-content;
     margin-bottom: 3%;
   }
   .photoCitrato2 {
     width: 100%;
+    height: max-content;
   }
 
   .box__footer {
@@ -1473,10 +1477,12 @@ textarea {
   }
   .photoCitrato {
     width: 100%;
+    height: max-content;
     margin-bottom: 3%;
   }
   .photoCitrato2 {
     width: 100%;
+    height: max-content;
   }
 
   .box__footer {
@@ -1738,10 +1744,12 @@ textarea {
   }
   .photoCitrato {
     width: 100%;
+    height: max-content;
     margin-bottom: 3%;
   }
   .photoCitrato2 {
     width: 100%;
+    height: max-content;
   }
   .box__footer {
     padding: 0;
