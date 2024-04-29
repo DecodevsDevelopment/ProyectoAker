@@ -1777,10 +1777,24 @@ textarea {
 /* Somos */
 .somosTitulo {
   font-family: "Roboto",sans-serif;
-  text-align: left;
+  text-align: center;
+  margin: 30px;
+  font-size: 30px;
+}
+.somosTitulo2 , .somosParrafo {
+  font-family: "Roboto, sans-serif";
+  margin: 35px;
 }
 .somosTexto{
   font-family: "Roboto",sans-serif;
   text-align: left;
 }
-
+.somosParrafo {
+  font-size: 23px;
+}
+.hr {
+  size: 20px; 
+  color: black;
+  width: 70%;
+  margin: 0 0 0 15%;
+}
