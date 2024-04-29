@@ -1773,3 +1773,14 @@ textarea {
     padding: 0 10px;
   }
 }
+
+/* Somos */
+.somosTitulo {
+  font-family: "Roboto",sans-serif;
+  text-align: left;
+}
+.somosTexto{
+  font-family: "Roboto",sans-serif;
+  text-align: left;
+}
+
