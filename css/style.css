@@ -88,10 +88,18 @@ body::-webkit-scrollbar-track {
 }
 
 /* Logo Ovorex */
-
 .logo {
-  height: 60px;
   width: 100px;
+  height: 60px;
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+  transition: 0.9s all;
+  cursor: pointer;
+}
+/* HAY QUE VER BIEN EL EFECTO DESPUES */
+.logo:hover {
+  transition: 0.9s all;
+  transform: scale(1.1);
 }
 
 /* Carrito Navbar */
@@ -271,7 +279,7 @@ body::-webkit-scrollbar-track {
     margin: 39px 0 0 0;
   }
 .containerProduct2 {
-  width: 90%;
+  width: 96%;
   display: grid;
   grid-template-columns: 11% 89%;
   grid-auto-flow: column;
@@ -299,11 +307,11 @@ body::-webkit-scrollbar-track {
   width: 100%;
   margin: 0 0 0 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-flow: wrap;
 }
 .tarjeta .cardProduct {
-  margin: 7% 3% 0 3%;
+  margin: 7% 5% 0 5%;
   width: 80%;
   max-width: 300px;
   height: auto;
@@ -1053,18 +1061,22 @@ textarea {
     margin-top: 53px;
   }
   .containerProduct2 {
-    width: 100%;
-  }
-  .containerProduct .tarjetas {
+  width: 96%;
+  display: grid;
+  grid-template-columns:  100%;
+}
+  .containerProduct2 .tarjetas {
     margin: 22px 0 0 0;
     height: max-content;
     width: 100%;
   }
 
-  .containerProduct .tarjetas .tarjeta {
+  .containerProduct2 .tarjetas .tarjeta {
     margin: 22px 0 0 0;
     height: max-content;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .tarjeta .cardProduct {
     width: 44%;
@@ -1286,19 +1298,23 @@ textarea {
   .navbar .container-fluid .show .navbar-nav {
     margin-top: 53px;
   }
-  .containerProduct2 {
-    width: 100%;
-  }
-  .containerProduct .tarjetas {
+ .containerProduct2 {
+  width: 96%;
+  display: grid;
+  grid-template-columns:  100%;
+}
+  .containerProduct2 .tarjetas {
     margin: 22px 0 0 0;
     height: max-content;
     width: 100%;
   }
 
-  .containerProduct .tarjetas .tarjeta {
+  .containerProduct2 .tarjetas .tarjeta {
     margin: 22px 0 0 0;
     height: max-content;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .tarjeta .cardProduct {
     max-width: 42%;
@@ -1561,18 +1577,22 @@ textarea {
     margin-bottom: 20px;
   }
   .containerProduct2 {
-    width: 100%;
-  }
-  .containerProduct .tarjetas {
+  width: 96%;
+  display: grid;
+  grid-template-columns:  100%;
+}
+  .containerProduct2 .tarjetas {
     margin: 22px 0 0 0;
     height: max-content;
     width: 100%;
   }
 
-  .containerProduct .tarjetas .tarjeta {
+  .containerProduct2 .tarjetas .tarjeta {
     margin: 22px 0 0 0;
     height: max-content;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .tarjeta .cardProduct {
     max-width: 42%;
