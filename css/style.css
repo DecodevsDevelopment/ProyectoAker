@@ -86,7 +86,67 @@ body::-webkit-scrollbar-track {
   width: 20px;
   height: 20px;
 }
-/* Titulo index */
+
+/* Logo Ovorex */
+
+.logo {
+  height: 60px;
+  width: 100px;
+}
+
+/* Carrito Navbar */
+.carrito {
+  width: 20px;
+  height: 20px;
+}
+.mostrar {
+  position: absolute;
+  background-color: yellow;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  top: 0;
+  left: 1rem;
+}
+.boxCarro {
+  display: flex;
+  flex-direction: column;
+}
+.boxCarrito {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+}
+.boxCarrito .imgCarrito {
+  width: 8%;
+  height: 10%;
+  margin: 0;
+}
+.boxCarrito .textCarrito {
+  height: 10%;
+  align-self: center;
+  margin: 0;
+}
+.boxCarrito .quantityCarrito {
+  width: 16%;
+  height: 10%;
+  align-self: center;
+}
+.boxCarrito .quantityCarrito .numberQuantityCarrito {
+  width: 28%;
+  height: 10%;
+  align-self: center;
+  border: #000 solid 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+/* Seccion Index */
 .tit1 {
   display: flex;
   justify-content: center;
@@ -97,15 +157,24 @@ body::-webkit-scrollbar-track {
   font-size: 50px;
 }
 
-/* Titulo productos */
-.tit2 {
-  margin: 103px auto 0 auto;
+#teAyudamos {
+  padding: 7rem 0;
+  background: url(https://scontent.fsfn6-1.fna.fbcdn.net/v/t1.6435-9/170154987_161065339221867_688646990340353770_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=RbCxkcixbR4Ab7ixIGn&_nc_ht=scontent.fsfn6-1.fna&oh=00_AfDQHnGB10lIlTOYAkyUmIMbTdiCU5S-j444RV3_MrJNdw&oe=66369E59)
+    center center / cover no-repeat fixed;
 }
-.tit2 .titulo2 {
-  font-family: "Roboto";
-  font-size: 50px;
+.banner {
+  width: 100%;
+  margin: 23px 0 0 0;
+  text-align: center;
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 5px 0 5px 0;
 }
-/* Cards index */
+.textBanner {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
 .textBox {
   max-width: 52ch;
   padding: 1em;
@@ -118,8 +187,7 @@ body::-webkit-scrollbar-track {
 }
 .cards {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   padding: 6rem 0;
   gap: 1.2em;
   justify-content: center;
@@ -159,25 +227,80 @@ body::-webkit-scrollbar-track {
   background-image: url(/img/OVOREX-1.webp);
   background-size: cover;
 }
-/* Card de producto */
-.containerProduct {
-  width: 100%;
-  display: flex;
-  align-items: center;
+
+/* Seccion Productos */
+.tit2 {
+  margin: 103px auto 0 auto;
+}
+.tit2 .titulo2 {
+  font-family: "Roboto";
+  font-size: 50px;
 }
 
-.containerProduct .tarjetas {
-  width: 100%;
-  margin: 22px 0px 0px 0px;
+/* Filtro */
+.filtro {
+  margin: 0 0 0 18%;
+}
+.catFiltro {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.filtroContenedor {
+  margin-top: 30px;
+  width: 200px;
+  height: 44px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+.textFiltro {
   display: flex;
   justify-content: center;
 }
+.filtroContenedor select {
+  width: 100%;
+  border: 3px solid rgba(67, 67, 67, 0.2);
+  font-size: 12px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+  .filtro2 {
+    display: flex;
+    flex-direction: column;
+    margin: 39px 0 0 0;
+  }
+.containerProduct2 {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 11% 89%;
+  grid-auto-flow: column;
+}
+.filtroContenedor2 {
+  margin: 30px 0 0 0;
+  width: 145px;
+  height: 210px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.filtroContenedor2 ul {
+  list-style: none;
+}
+.listFiltro {
+  margin-bottom: 5px;
+}
+
+.listFiltro a {
+  color: #434343;
+  text-decoration: none;
+}
+
 .tarjetas .tarjeta {
   width: 100%;
   margin: 0 0 0 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-flow: wrap;
 }
 .tarjeta .cardProduct {
   margin: 7% 3% 0 3%;
@@ -209,7 +332,6 @@ body::-webkit-scrollbar-track {
   height: 100%;
   max-height: 200px;
   max-width: 200px;
-  /* filter: brightness(1.1); */
   mix-blend-mode: multiply;
 }
 .tarjeta .cardProduct .card-info {
@@ -276,7 +398,6 @@ body::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Ventana o caja modal */
 .cerrar {
   display: flex;
   justify-content: end;
@@ -295,6 +416,78 @@ body::-webkit-scrollbar-track {
   animation-duration: 0.5s;
 }
 
+.close {
+  color: black;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buy {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0 0;
+}
+.buttonBuy {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonBuy:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.buttonBuy:active {
+  transform: translateY(-1px);
+}
+
+.buttonBuy2 {
+  padding: 1.3em 3em;
+  margin: 0 60px 0 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.buttonBuy2:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.buttonBuy2:active {
+  transform: translateY(-1px);
+}
 /* Animación */
 
 @keyframes animarsuperior {
@@ -308,20 +501,6 @@ body::-webkit-scrollbar-track {
   }
 }
 
-/* Botón cerrar */
-.close {
-  color: black;
-  float: right;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* Formulario contacto*/
 .formularioContacto {
@@ -453,10 +632,11 @@ textarea {
 .inputContainer.error small {
   visibility: visible;
 }
+
 /* Footer */
 .container__footer {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   align-items: flex-end;
   max-width: 1200px;
   margin: 100px auto auto auto;
@@ -544,83 +724,8 @@ textarea {
   font-size: 36px;
   color: #fff;
 }
-/* Parallax  index*/
 
-#teAyudamos {
-  padding: 7rem 0;
-  background: url(https://scontent.fsfn6-1.fna.fbcdn.net/v/t1.6435-9/170154987_161065339221867_688646990340353770_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=RbCxkcixbR4Ab7ixIGn&_nc_ht=scontent.fsfn6-1.fna&oh=00_AfDQHnGB10lIlTOYAkyUmIMbTdiCU5S-j444RV3_MrJNdw&oe=66369E59)
-    center center / cover no-repeat fixed;
-}
-.banner {
-  width: 100%;
-  margin: 23px 0 0 0;
-  text-align: center;
-  background-color: #3d3d3d;
-  color: #fff;
-  padding: 5px 0 5px 0;
-}
-.textBanner {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-/* Filtro */
-.filtro {
-  margin: 0 0 0 18%;
-}
-.catFiltro {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  padding-bottom: 10px;
-}
-.filtroContenedor {
-  margin-top: 30px;
-  width: 200px;
-  height: 44px;
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-}
-.textFiltro {
-  display: flex;
-  justify-content: center;
-}
-.filtroContenedor select {
-  width: 100%;
-  border: 3px solid rgba(67, 67, 67, 0.2);
-  font-size: 12px;
-  border-radius: 10px;
-  font-family: "Roboto", sans-serif;
-}
-
-.filtro2 {
-  display: flex;
-  flex-direction: column;
-  width: 29%;
-  margin: 39px 0 60px 0;
-}
-.containerProduct2 {
-  width: 90%;
-  display: flex;
-}
-.filtroContenedor2 {
-  margin: 30px 0 0 0;
-  width: 200px;
-  height: 44px;
-  justify-content: flex-start;
-  padding: 10px;
-  font-family: "Roboto", sans-serif;
-}
-.filtroContenedor2 ul {
-  list-style: none;
-}
-.listFiltro {
-  margin-bottom: 5px;
-}
-
-.listFiltro a {
-  color: #434343;
-  text-decoration: none;
-}
-
+/* Proteinas Descripcion */
 /* Zoom productos */
 .conteinerTable {
   width: 100%;
@@ -628,7 +733,7 @@ textarea {
 .conteinerBox {
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
+   flex-flow: wrap;
 }
 .carouselPhoto {
   width: 60%;
@@ -683,7 +788,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-flow: wrap;
 }
 .contenedor .tabla {
   display: inherit;
@@ -730,7 +835,7 @@ textarea {
   margin: 3%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-flow: wrap;
 }
 .TextProtein {
   font-size: 15px;
@@ -747,12 +852,6 @@ textarea {
 .photoCitrato2 {
   width: 70%;
   height: max-content;
-}
-/* Logo Ovorex */
-
-.logo {
-  height: 60px;
-  width: 100px;
 }
 
 .formu {
@@ -845,7 +944,8 @@ textarea {
   transform: scale(0.95);
   transition-duration: 0.5s;
 }
-/* Carrito Navbar */
+
+
 
 /* Codigo postal */
 .input-group {
@@ -867,154 +967,7 @@ textarea {
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.card-button-navbar {
-  position: relative;
-}
-.carrito {
-  width: 20px;
-  height: 20px;
-}
-.mostrar {
-  position: absolute;
-  background-color: yellow;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 0;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-  top: 0;
-  left: 1rem;
-}
-.boxCarro {
-  display: flex;
-  flex-direction: column;
-}
-.boxCarrito {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 3%;
-}
-.boxCarrito .imgCarrito {
-  width: 8%;
-  height: 10%;
-  margin: 0;
-}
-.boxCarrito .textCarrito {
-  height: 10%;
-  align-self: center;
-  margin: 0;
-}
-.boxCarrito .quantityCarrito {
-  width: 16%;
-  height: 10%;
-  align-self: center;
-}
-.boxCarrito .quantityCarrito .numberQuantityCarrito {
-  width: 28%;
-  height: 10%;
-  align-self: center;
-  border: #000 solid 1px;
-  border-radius: 5px;
-  text-align: center;
-}
 
-.buy {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0 0 0;
-}
-.buttonBuy {
-  padding: 1.3em 3em;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-
-.buttonBuy:hover {
-  background-color: #23c483;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  color: #fff;
-  transform: translateY(-7px);
-}
-
-.buttonBuy:active {
-  transform: translateY(-1px);
-}
-
-.buttonBuy2 {
-  padding: 1.3em 3em;
-  margin: 0 60px 0 0;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-.buttonBuy2:hover {
-  background-color: #23c483;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  color: #fff;
-  transform: translateY(-7px);
-}
-
-.buttonBuy2:active {
-  transform: translateY(-1px);
-}
-
-@media screen and (min-width: 992px) {
-  .carouselDetails {
-    display: none;
-  }
-  .btn {
-    display: none;
-  }
-  .boxProtein2 {
-    display: none;
-  }
-  .filtro2 {
-    display: flex;
-    flex-direction: column;
-    width: 29%;
-    margin: 39px 0 0 0;
-  }
-
-  .filtroContenedor2 {
-    width: 145px;
-    height: 210px;
-    font-family: "Roboto", sans-serif;
-  }
-  .filtroContenedor2 ul {
-    list-style: none;
-  }
-  .listFiltro {
-    margin-bottom: 5px;
-  }
-
-  .listFiltro a {
-    color: #434343;
-    text-decoration: none;
-  }
-}
 .mediosPago {
   margin-top: 3%;
   margin-bottom: 5px;
@@ -1029,6 +982,51 @@ textarea {
   align-items: center;
   margin: -28% 0 0 0;
 }
+.card-button-navbar {
+  position: relative;
+}
+
+/* Somos */
+.somosTitulo {
+  font-family: "Roboto",sans-serif;
+  text-align: center ;
+  margin: 30px;
+  font-size: 30px;
+}
+.somosTitulo2 {
+  font-family: "Roboto, sans-serif";
+  margin: 35px;
+  text-align: center;
+}
+.somosTexto{
+  font-family: "Roboto",sans-serif;
+  text-align: left;
+  font-size: 20px;
+  }
+.somosParrafo {
+  font-family: "Roboto, sans-serif";
+  margin: 35px;
+  text-align: left;
+  font-size: 23px;
+}
+.hr {
+  size: 20px; 
+  color: black;
+  width: 70%;
+  margin: 0 0 0 15%;
+}
+@media screen and (min-width: 992px) {
+  .carouselDetails {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .boxProtein2 {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 769px) and (max-width: 991.9px) {
   .boxProtein {
     display: none;
@@ -1224,7 +1222,7 @@ textarea {
     margin: 3%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: wrap;
   }
   .TextProtein {
     font-size: 15px;
@@ -1370,7 +1368,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: wrap;
   }
   .catFiltro {
     padding: 0;
@@ -1466,7 +1464,7 @@ textarea {
     margin: 3%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: wrap;
   }
   .TextProtein {
     font-size: 15px;
@@ -1733,7 +1731,7 @@ textarea {
     margin: 3%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: wrap;
   }
   .TextProtein {
     font-size: 15px;
@@ -1772,34 +1770,4 @@ textarea {
   .box__copyright {
     padding: 0 10px;
   }
-}
-
-/* Somos */
-.somosTitulo {
-  font-family: "Roboto",sans-serif;
-  text-align: center ;
-  margin: 30px;
-  font-size: 30px;
-}
-.somosTitulo2 {
-  font-family: "Roboto, sans-serif";
-  margin: 35px;
-  text-align: center;
-}
-.somosTexto{
-  font-family: "Roboto",sans-serif;
-  text-align: left;
-  font-size: 20px;
-  }
-.somosParrafo {
-  font-family: "Roboto, sans-serif";
-  margin: 35px;
-  text-align: left;
-  font-size: 23px;
-}
-.hr {
-  size: 20px; 
-  color: black;
-  width: 70%;
-  margin: 0 0 0 15%;
 }
