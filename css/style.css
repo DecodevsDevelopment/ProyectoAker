@@ -89,7 +89,7 @@ body::-webkit-scrollbar-track {
 
 /* Logo Ovorex */
 .logo {
-  width: 188px;
+  width: 100px;
   height: 60px;
   transition: 0.9s all;
   cursor: pointer;
