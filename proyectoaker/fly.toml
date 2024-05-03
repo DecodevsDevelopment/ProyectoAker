@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for proyectoaker on 2024-04-11T15:40:12+02:00
+# fly.toml app configuration file generated for proyectoaker on 2024-05-02T23:28:54+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'proyectoaker'
-primary_region = 'mad'
+primary_region = 'eze'
 console_command = '/code/manage.py shell'
 
 [build]
@@ -15,7 +15,7 @@ console_command = '/code/manage.py shell'
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = false
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
@@ -28,3 +28,4 @@ console_command = '/code/manage.py shell'
 [[statics]]
   guest_path = '/code/static'
   url_prefix = '/static/'
+

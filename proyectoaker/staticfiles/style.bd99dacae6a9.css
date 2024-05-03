@@ -91,6 +91,7 @@ body::-webkit-scrollbar-track {
 .logo {
   width: 100px;
   height: 60px;
+  filter: brightness(1.1);
   mix-blend-mode: multiply;
   transition: 0.9s all;
   cursor: pointer;
