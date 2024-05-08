@@ -1,0 +1,35 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar {
+  height: 0.65rem;
+  width: 0.62rem;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: #8c8c88;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #595956;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}

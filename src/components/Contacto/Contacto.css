@@ -1,0 +1,129 @@
+.formularioContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 130px;
+}
+.formularioContacto .formulario {
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  padding: 30px 40px;
+  box-shadow: 0 70px 70px 40px rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+}
+.formularioContacto .formulario .title {
+  font-size: 2em;
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.formularioContacto .formulario .inputContainer {
+  position: relative;
+  width: 90%;
+  height: 45px;
+  margin-bottom: 45px;
+}
+.formularioContacto .formulario .inputContainer .input {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dadce0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  min-width: none;
+  z-index: 1;
+}
+
+.formularioContacto .formulario .inputContainer.error .input .i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.inputContainer.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+.formularioContacto .formulario .inputContainer .input::placeholder {
+  color: transparent;
+}
+.formularioContacto .formulario .inputContainer .input:focus + .label {
+  top: -8px;
+  left: 3px;
+  z-index: 10;
+  font-weight: 20px;
+  font-size: 14px;
+  color: purple;
+}
+.formularioContacto .formulario .inputContainer .input:focus {
+  margin-bottom: 20px;
+  border: 2px solid purple;
+}
+.formularioContacto .formulario .inputContainer .input:not(:placeholder-shown) + .label {
+  top: -8px;
+  left: 3px;
+  z-index: 10;
+  font-weight: 20px;
+  font-size: 14px;
+}
+.formularioContacto .formulario .inputContainer .label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: white;
+  color: #9867c5;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+textarea {
+  min-width: 100%;
+  resize: vertical;
+  min-height: 60px;
+  max-height: 80px;
+  font-family: "Roboto", sans-serif;
+}
+.formularioContacto .formulario .submitBtn {
+  display: block;
+  padding: 15px 30px;
+  border: none;
+  background-color: purple;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 87px auto 0 auto;
+}
+.formularioContacto .formulario .submitBtn:hover {
+  background-color: #9867c5;
+  transform: translateY(-2px);
+}
+
+/* mensaje de error validacion contacto */
+.inputContainer.error input {
+  border-color: #e74c3c;
+}
+.error-message {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 60px;
+  font-size: 12px;
+  visibility: hidden;
+}
+.inputContainer .error2-message {
+  top: 87px;
+}
+.inputContainer.error .error-messageall {
+  visibility: visible;
+}

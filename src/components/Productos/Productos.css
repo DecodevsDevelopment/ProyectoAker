@@ -1,0 +1,343 @@
+.tit2 {
+  margin: 103px auto 0 auto;
+}
+.tit2 .titulo2 {
+  font-family: "Roboto";
+  font-size: 50px;
+}
+
+/* Filtro */
+.filtro {
+  margin: 0 0 0 18%;
+}
+.catFiltro {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.filtroContenedor {
+  margin-top: 30px;
+  width: 200px;
+  height: 44px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+.textFiltro {
+  display: flex;
+  justify-content: center;
+}
+.filtroContenedor select {
+  width: 100%;
+  border: 3px solid rgba(67, 67, 67, 0.2);
+  font-size: 12px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.filtro2 {
+  display: flex;
+  flex-direction: column;
+  margin: 39px 0 0 0;
+}
+.containerProduct2 {
+  width: 96%;
+  display: grid;
+  grid-template-columns: 11% 89%;
+  grid-auto-flow: column;
+}
+.filtroContenedor2 {
+  margin: 30px 0 0 0;
+  width: 145px;
+  height: 210px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.filtroContenedor2 ul {
+  list-style: none;
+}
+.listFiltro {
+  margin-bottom: 5px;
+}
+
+.listFiltro a {
+  color: #434343;
+  text-decoration: none;
+}
+
+.tarjetas .tarjeta {
+  width: 100%;
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: wrap;
+}
+.tarjeta .cardProduct {
+  margin: 7% 4% 0 4%;
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  padding: 0.8em;
+  background: #f9f9f9;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 50px 70px rgba(0, 0, 0, 0.4);
+  transition: 0.5s all;
+}
+.tarjeta .cardProduct:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.5s all;
+  transform: translateY(-3%);
+}
+.tarjeta .cardProduct .cardImgProduct {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.tarjeta .cardProduct .cardImgProduct img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  max-width: 200px;
+  mix-blend-mode: multiply;
+}
+.tarjeta .cardProduct .card-info {
+  max-height: max-content;
+}
+.tarjeta .cardProduct .card-info .text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.tarjeta .cardProduct .card-info .text-body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  padding-bottom: 10px;
+  height: max-content;
+  text-wrap: balance;
+  text-align: left;
+  margin: 0;
+}
+.tarjeta .cardProduct .card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+.tarjeta .cardProduct .card-footer .text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+.tarjeta .cardProduct .card-footer .card-button {
+  border: 1px solid #252525;
+  display: flex;
+  padding: 0.3em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+.tarjeta .cardProduct .card-footer .card-button svg {
+  width: 20px;
+  height: 20px;
+}
+.tarjeta .cardProduct .card-footer .card-button:hover {
+  border: 1px solid #ffcaa6;
+  background-color: #ffcaa6;
+}
+@media screen and (min-width: 992px) {
+  .filtro .btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 991.9px) {
+  .containerProduct2 {
+    width: 96%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .containerProduct2 .tarjetas {
+    margin: 22px 0 0 0;
+    height: max-content;
+    width: 100%;
+  }
+
+  .containerProduct2 .tarjetas .tarjeta {
+    margin: 22px 0 0 0;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .tarjeta .cardProduct {
+    width: 44%;
+    height: max-content;
+    padding: 0.3em;
+    margin: 7% 3% 2% 3%;
+  }
+  .tarjeta .cardProduct .card-info {
+    font-size: 11px;
+    width: 100%;
+  }
+  .tarjeta .cardProduct .card-footer {
+    font-size: 10px;
+  }
+  .filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+  }
+  .filtro2 {
+    display: none;
+  }
+  .filtroContenedor {
+    margin-top: 37px;
+    width: 36%;
+    height: 86px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+  }
+  .filtroContenedor select {
+    width: 90%;
+    border: 3px solid rgba(67, 67, 67, 0.2);
+    font-size: 12px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .filtro .btn {
+    width: 36%;
+    height: 34%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .containerProduct2 {
+    width: 96%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .containerProduct2 .tarjetas {
+    margin: 22px 0 0 0;
+    height: max-content;
+    width: 100%;
+  }
+
+  .containerProduct2 .tarjetas .tarjeta {
+    margin: 22px 0 0 0;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .tarjeta .cardProduct {
+    max-width: 42%;
+    height: max-content;
+    padding: 0.3em;
+    margin: 7% 4% 2% 3%;
+  }
+  .tarjeta .cardProduct .card-info {
+    font-size: 11px;
+    width: 100%;
+  }
+  .tarjeta .cardProduct .card-footer {
+    font-size: 10px;
+  }
+  .filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .filtro2 {
+    display: none;
+  }
+  .filtroContenedor {
+    margin-top: 37px;
+    width: 35%;
+    height: 86px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+  }
+  .filtroContenedor select {
+    width: 90%;
+    border: 3px solid rgba(67, 67, 67, 0.2);
+    font-size: 12px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .containerProduct2 {
+    width: 96%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .containerProduct2 .tarjetas {
+    margin: 22px 0 0 0;
+    height: max-content;
+    width: 100%;
+  }
+
+  .containerProduct2 .tarjetas .tarjeta {
+    margin: 22px 0 0 0;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .tarjeta .cardProduct {
+    max-width: 42%;
+    height: max-content;
+    padding: 0.3em;
+    margin: 7% 4% 2% 3%;
+  }
+
+  .tarjeta .cardProduct .card-info {
+    font-size: 11px;
+    width: 100%;
+  }
+  .tarjeta .cardProduct .card-footer {
+    font-size: 10px;
+  }
+  .filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .filtro2 {
+    display: none;
+  }
+  .filtroContenedor {
+    margin-top: 37px;
+    width: 35%;
+    height: 86px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+  }
+  .filtroContenedor select {
+    width: 90%;
+    border: 3px solid rgba(67, 67, 67, 0.2);
+    font-size: 12px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .filtro .btn {
+    width: 35%;
+    height: 34%;
+  }
+}
