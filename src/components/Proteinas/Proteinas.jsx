@@ -99,7 +99,14 @@ export const Proteinas = () => {
                 <div id='carouselExampleInterval' className='carousel slide carouselDetails' data-bs-ride='carousel'>
                   <div className='carousel-inner'>
                     <div className='carousel-item active' data-bs-interval='3000'>
-                      <img src={image1} className='image1' alt='...' />
+                      <img src='https://acdn.mitiendanube.com/stores/001/681/926/products/citrato-48c1f7a8a3f7ffffe217049136708845-1024-1024.webp' className='image1' alt='...' />
+                    </div>
+                    <div className='carousel-item active' data-bs-interval='3000'>
+                      <img
+                        src='https://acdn.mitiendanube.com/stores/001/681/926/products/pancake-keto11-c2b0a8c4b86b838a6116693845118492-1024-1024.webp'
+                        className='image1'
+                        alt='...'
+                      />
                     </div>
                   </div>
                   <button className='carousel-control-prev' type='button' data-bs-target='#carouselExampleInterval' data-bs-slide='prev'>
