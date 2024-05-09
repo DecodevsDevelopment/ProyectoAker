@@ -92,55 +92,55 @@
   left: 1rem;
 }
 @media screen and (min-width: 769px) and (max-width: 991.9px) {
-  .navbar .container-fluid .show {
+  .navbar .container-fluid .navbar-collapse.show {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .show .search {
+  .navbar .container-fluid .navbar-collapse.show .search {
     position: fixed;
     margin: 50px 0 182px 0;
     left: 30%;
     width: 100%;
     max-width: 40%;
   }
-  .navbar .container-fluid .show .navbar-nav {
+  .navbar .container-fluid .navbar-collapse.show .navbar-nav {
     margin-top: 53px;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .navbar .container-fluid .show {
+  .navbar .container-fluid .navbar-collapse.show {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .show .search {
+  .navbar .container-fluid .navbar-collapse.show .search {
     position: fixed;
     margin: 50px 0 182px 0;
     left: 30%;
     width: 100%;
     max-width: 40%;
   }
-  .navbar .container-fluid .show .navbar-nav {
+  .navbar .container-fluid .navbar-collapse.show .navbar-nav {
     margin-top: 53px;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .navbar .container-fluid .show {
+  .navbar .container-fluid .navbar-collapse.show {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .show .search {
+  .navbar .container-fluid .navbar-collapse.show .search {
     position: fixed;
     margin: 50px 0 182px 0;
     left: 30%;
     width: 100%;
     max-width: 40%;
   }
-  .navbar .container-fluid .show .navbar-nav {
+  .navbar .container-fluid .navbar-collapse.show .navbar-nav {
     margin-top: 53px;
   }
 }

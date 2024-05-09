@@ -32,7 +32,6 @@ const Card = ({ text }) => {
 export const Principal = () => {
   return (
     <>
-      AOS.init();
       <Navbar />
       <article className='arti1'>
         <section>
