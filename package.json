@@ -1,6 +1,7 @@
 {
   "name": "aker",
   "private": true,
+  "homepage": "https://DecodevsDevelopment.github.io/ProyectoAker",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
