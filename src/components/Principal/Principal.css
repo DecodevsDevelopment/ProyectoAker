@@ -1,10 +1,14 @@
+@font-face {
+  font-family: "ff";
+  src: url(../../../public/Transducer.ttf);
+}
 .tit1 {
   display: flex;
   justify-content: center;
   margin: 103px auto 15px auto;
 }
 .tit1 .titulo1 {
-  font-family: "Roboto";
+  font-family: "ff";
   font-size: 50px;
 }
 
@@ -101,8 +105,15 @@
     font-size: 44px;
   }
   .carousel {
+    height: 50%;
     margin-bottom: 20%;
   }
+  .carousel-item img {
+    width: 100vw;
+    object-fit: contain;
+    display: block;
+  }
+
   #teAyudamos {
     padding: 3rem 0;
     background: url(./assets/banner.webp) center center / cover no-repeat fixed;

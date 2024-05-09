@@ -24,21 +24,6 @@
   transform: scaleX(1);
 }
 
-.navbar .container-fluid .navbar-collapse {
-  flex-grow: 0;
-  background-color: grey;
-}
-
-.navbar .container-fluid .navbar-collapse .navbar-nav {
-  float: right;
-}
-
-.search {
-  position: absolute;
-  left: 42%;
-  width: 300px;
-}
-
 .icon {
   width: 20px;
   height: 20px;
@@ -91,6 +76,21 @@
   top: 0;
   left: 1rem;
 }
+.navbar .container-fluid .navbar-collapse.show {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbar .container-fluid .navbar-collapse.show .search {
+  position: fixed;
+  margin: 50px 0 182px 0;
+  left: 30%;
+  width: 100%;
+  max-width: 40%;
+}
+.navbar .container-fluid .navbar-collapse.show .navbar-nav {
+  margin-top: 53px;
+}
 @media screen and (min-width: 769px) and (max-width: 991.9px) {
   .navbar .container-fluid .navbar-collapse.show {
     display: flex;
@@ -127,20 +127,19 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .navbar .container-fluid .navbar-collapse.show {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+@media screen and (min-width: 991px) {
+  .navbar .container-fluid .navbar-collapse {
+    flex-grow: 0;
+    background-color: grey;
   }
-  .navbar .container-fluid .navbar-collapse.show .search {
-    position: fixed;
-    margin: 50px 0 182px 0;
-    left: 30%;
-    width: 100%;
-    max-width: 40%;
+
+  .navbar .container-fluid .navbar-collapse .navbar-nav {
+    float: right;
   }
-  .navbar .container-fluid .navbar-collapse.show .navbar-nav {
-    margin-top: 53px;
+
+  .search {
+    position: absolute;
+    left: 42%;
+    width: 300px;
   }
 }
