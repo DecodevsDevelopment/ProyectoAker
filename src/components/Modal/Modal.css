@@ -155,16 +155,36 @@
   transform: translateY(-1px);
 }
 @media screen and (min-width: 769px) and (max-width: 991.9px) {
+  .modal {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding-top: 27px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .modal-dialog {
     display: flex;
     justify-content: center;
-    width: 73%;
     height: max-content;
+    width: 44%;
+    min-width: 44%;
+    max-width: 50%;
+    margin: 0 0 0 0;
   }
+
   .modal-dialog .modal-content {
     height: max-content;
-    width: 100%;
+    min-width: 54%;
+    display: flex;
+    max-width: 80%;
   }
+
   .titFiltro {
     text-align: center;
   }
@@ -193,15 +213,32 @@
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  .modal {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding-top: 27px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .modal-dialog {
     display: flex;
     justify-content: center;
     height: max-content;
-    width: 60%;
+    width: 50%;
+    max-width: 55%;
+    margin: 0 0 0 0;
   }
   .modal-dialog .modal-content {
     height: max-content;
-    width: 80%;
+    min-width: 54%;
+    display: flex;
+    max-width: 80%;
   }
   .titFiltro {
     text-align: center;
@@ -232,15 +269,32 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  .modal {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding-top: 27px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .modal-dialog {
     display: flex;
     justify-content: center;
     height: max-content;
-    width: 60%;
+    width: 70%;
+    min-width: 50%;
+    max-width: 70%;
   }
   .modal-dialog .modal-content {
     height: max-content;
-    width: 73%;
+    min-width: 54%;
+    display: flex;
+    max-width: 80%;
   }
   .titFiltro {
     text-align: center;

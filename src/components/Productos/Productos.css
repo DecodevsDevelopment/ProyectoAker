@@ -237,7 +237,7 @@
     height: max-content;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .tarjeta .cardProduct {
     max-width: 42%;
@@ -295,7 +295,7 @@
     height: max-content;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .tarjeta .cardProduct {
     max-width: 42%;
