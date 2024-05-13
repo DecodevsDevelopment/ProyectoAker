@@ -1,7 +1,7 @@
 import { Navbar } from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
 import React, { useState, useRef } from "react";
-
+import { Zoom, Zoom2 } from "./ZoomImage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Proteinas.css";
 import image1 from "./assets/citrato-de-magnesio.webp";
@@ -16,11 +16,13 @@ export const Proteinas = () => {
 
   const handleMouseMove = (event) => {
     const figure = figureRef.current;
+    if (!figure) return; // Early return if figure is null
+
     const { offsetX, offsetY, offsetWidth, offsetHeight } = figure;
 
     // Calculate zoom offsets
-    const x = (offsetX / offsetWidth) * 100;
-    const y = (offsetY / offsetHeight) * 100;
+    const x = (offsetX / offsetWidth) * 50;
+    const y = (offsetY / offsetHeight) * 50;
 
     // Style update
     figure.style.backgroundPosition = `${x}% ${y}%`;
@@ -59,32 +61,10 @@ export const Proteinas = () => {
                 <div id='carouselExample' className='carousel slide carouselPhoto'>
                   <div className='carousel-inner carouselPhotoInner'>
                     <div className='carousel-item active' data-bs-interval='3000'>
-                      <figure
-                        ref={figureRef}
-                        className='zoom'
-                        onMouseMove={handleMouseMove}
-                        style={{ backgroundImage: `url(https://acdn.mitiendanube.com/stores/001/681/926/products/citrato-48c1f7a8a3f7ffffe217049136708845-1024-1024.webp)` }}
-                      >
-                        <img
-                          src={"https://acdn.mitiendanube.com/stores/001/681/926/products/citrato-48c1f7a8a3f7ffffe217049136708845-1024-1024.webp"}
-                          className='image1'
-                          alt='Proteina'
-                        />
-                      </figure>
+                      <Zoom />
                     </div>
                     <div className='carousel-item' data-bs-interval='3000'>
-                      <figure
-                        ref={figureRef}
-                        className='zoom'
-                        onMouseMove={handleMouseMove}
-                        style={{ backgroundImage: `url(https://acdn.mitiendanube.com/stores/001/681/926/products/pancake-keto11-c2b0a8c4b86b838a6116693845118492-1024-1024.webp)` }}
-                      >
-                        <img
-                          src={"https://acdn.mitiendanube.com/stores/001/681/926/products/pancake-keto11-c2b0a8c4b86b838a6116693845118492-1024-1024.webp"}
-                          className='image2'
-                          alt='Proteina keto'
-                        />
-                      </figure>
+                      <Zoom2 />
                     </div>
                   </div>
                   <button className='carousel-control-prev' type='button' data-bs-target='#carouselExample' data-bs-slide='prev'>

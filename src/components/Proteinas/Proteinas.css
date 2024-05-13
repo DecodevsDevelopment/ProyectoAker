@@ -19,13 +19,14 @@
 }
 
 .zoom {
-  background-position: 50% 50%;
   position: relative;
   width: 90%;
   overflow: hidden;
   cursor: default;
 }
-
+.zoom:hover .image1 {
+  opacity: 0;
+}
 .image1:hover {
   opacity: 0;
 }
@@ -33,11 +34,13 @@
   transition: opacity 0.5s;
   display: block;
   width: 100%;
+  margin-left: 5%;
 }
 .image2 {
   transition: opacity 0.5s;
   display: block;
   width: 100%;
+  margin-left: 5%;
 }
 .image2:hover {
   opacity: 0;
