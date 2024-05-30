@@ -116,7 +116,7 @@
                 {% for prod in productos %}
                     <div class="card cardProduct" data-aos="zoom-out">
                         <div class="card-img cardImgProduct">
-                            <a href="{% url 'index' %}"><img src="{{ prod.image.url }}"
+                            <a href="{% url 'detail' pk=prod.id %}"><img src="{{ prod.image.url }}"
                                                              alt="Imagen Citrato de Magnesio"/> </a>
                         </div>
                         <div class="card-info">

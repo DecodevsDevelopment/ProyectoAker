@@ -64,7 +64,7 @@
                     <div>
                         <img src="{% static 'core/img/carrito.webp' %}" class="carrito" alt="imagen carrito"/>
                     </div>
-                    <p class="mostrar">1</p>
+                    <p class="mostrar" id="itemCountDisplay"></p>
                 </div>
             </div>
         </div>
@@ -96,30 +96,23 @@
 
 <section>
         <!-- Ventana Modal -->
-            <div id="ventanaModal" class="modal">
-                <div class="contenido-modal">
-                    <span class="cerrar">&times;</span>
-                    <div class="modal-carro">
-                        <h2>Carrito</h2>
-                    </div>
-                    <div class="boxCarro">
-                        <div class="boxCarrito">
-                            <img src="../img/citrato-de-magnesio.webp" class="imgCarrito"/>
-                            <p class="textCarrito">Protenia</p>
-                            <div class="quantityCarrito">
-                                <label class="textQuantityCarrito">Cantidad</label>
-                                <input type="number" min="1" value="1" class="numberQuantityCarrito"/>
-                            </div>
-                            <p></p>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="buy">
-                        <button class="buttonBuy2"> Seguir comprando</button>
-                        <button class="buttonBuy"> Comprar</button>
-                    </div>
-                </div>
-            </div>
+
+    <div id="ventanaModal" class="modal">
+    <div class="contenido-modal">
+        <span class="cerrar">&times;</span>
+        <div class="modal-carro">
+            <h2>Carrito</h2>
+        </div>
+        <div class="boxCarro">
+            <!-- Items  -->
+        </div>
+        <div class="buy">
+            <button class="buttonBuy2" id="seguirComprando"> Seguir comprando</button>
+            <button class="buttonBuy"> Comprar</button>
+        </div>
+    </div>
+</div>
+
         <!-- -->
 
 
@@ -186,5 +179,171 @@
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"
 ></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('ventanaModal');
+        const modalContent = modal.querySelector('.boxCarro');
+        const closeModal = modal.querySelector('.cerrar');
+        const seguirComprandoBtn = modal.querySelector('#seguirComprando');
+
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.forEach(item => {
+                const productHtml = `
+                    <div class="boxCarrito" data-id="${item.id}">
+                        <img src="${item.image}" class="imgCarrito"/>
+                        <p class="textCarrito">${item.name}</p>
+                        <div class="quantityCarrito">
+                            <label class="textQuantityCarrito">Cantidad</label>
+                            <input type="number" min="1" value="${item.quantity}" class="numberQuantityCarrito"/>
+                        </div>
+                        <p class="priceCarrito">${item.price}</p>
+                        <button class="remove-btn">Quitar</button>
+                    </div>
+                `;
+                modalContent.insertAdjacentHTML('beforeend', productHtml);
+            });
+            updateItemCountDisplay();
+        }
+
+
+
+
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateItemCountDisplay();
+        }
+
+        function removeItemFromCart(productId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.id !== productId);
+            saveCart(cart);
+            document.querySelector(`.boxCarrito[data-id="${productId}"]`).remove();
+
+            updateItemCountDisplay();
+        }
+
+        document.querySelectorAll('.comprar-btn').forEach(button => {
+            button.addEventListener('click', function () {
+
+                const productId = this.getAttribute('data-id');
+                const productName = this.getAttribute('data-name');
+                const productPrice = this.getAttribute('data-price');
+                const productImage = this.getAttribute('data-image');
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                let existingProduct = cart.find(item => item.id === productId);
+
+                    if (existingProduct) {
+                    existingProduct.quantity++;
+
+                    } else {
+                            cart.push({
+                                id: productId,
+                                name: productName,
+                                price: productPrice,
+                                image: productImage,
+                                quantity: 1
+                            });
+
+                              let productHtml = `
+                    <div class="boxCarrito" data-id="${productId}">
+                        <img src="${productImage}" class="imgCarrito"/>
+                        <p class="textCarrito">${productName}</p>
+                        <div class="quantityCarrito">
+                            <label class="textQuantityCarrito">Cantidad</label>
+                            <input type="number" min="1" value="1" class="numberQuantityCarrito"/>
+                        </div>
+                        <p class="priceCarrito">${productPrice}</p>
+                        <button class="remove-btn">Quitar</button>
+                    </div>
+                `;
+
+                modalContent.insertAdjacentHTML('beforeend', productHtml);
+                modal.style.display = 'block';
+
+                    }
+                    console.log(existingProduct)
+
+
+
+
+
+                // Add event listener for the remove button
+                document.querySelector(`.boxCarrito[data-id="${productId}"] .remove-btn`).addEventListener('click', function () {
+                    removeItemFromCart(productId);
+                });
+
+             saveCart(cart);
+            updateItemCountDisplay();
+            });
+        });
+
+        closeModal.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+
+        seguirComprandoBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        loadCart();
+
+        // Add event listeners for remove buttons on page load
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const productId = this.closest('.boxCarrito').getAttribute('data-id');
+                removeItemFromCart(productId);
+            });
+        });
+    });
+
+         function getItemCountInCart() {
+            const itemsInCart = document.querySelectorAll('.boxCarrito').length;
+            return itemsInCart;
+        }
+
+        function updateItemCountDisplay() {
+            const itemCount = getItemCountInCart();
+            const itemCountDisplay = document.getElementById('itemCountDisplay');
+            itemCountDisplay.textContent = `${itemCount}`;
+        }
+
+        // Llama a esta función para actualizar el contenido del elemento <p> cuando sea necesario
+        updateItemCountDisplay();
+
+        // Agrega esta parte del código donde agregues un elemento al carrito (por ejemplo, dentro del evento de clic en el botón "Comprar")
+        document.querySelectorAll('.comprar-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                // ... Código para agregar un elemento al carrito ...
+
+                // Después de agregar un elemento al carrito, actualiza el contador
+                updateItemCountDisplay();
+            });
+        });
+
+        // Agrega esta parte del código donde elimines un elemento del carrito (por ejemplo, dentro del evento de clic en el botón "Remove")
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const productId = this.closest('.boxCarrito').getAttribute('data-id');
+                removeItemFromCart(productId);
+
+                // Después de eliminar un elemento del carrito, actualiza el contador
+                updateItemCountDisplay();
+            });
+        });
+
+</script>
+
+
+
 </body>
 </html>

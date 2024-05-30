@@ -4,8 +4,6 @@ FROM python:${PYTHON_VERSION}
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV SECRET_KEY "EmQwvGbJPHWJVmK4XC1viOsidmbRo1YL4ChDs9TYrvxeWvfRDI"
-
 
 RUN mkdir -p /code
 
@@ -18,7 +16,7 @@ RUN set -ex && \
     rm -rf /root/.cache/
 COPY . /code
 
-
+ENV SECRET_KEY "ZhJ2sNTyvLpy20sVZLSZJUQn9z1cNlJfhiZjHRV8aen1nSYQn4"
 RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
