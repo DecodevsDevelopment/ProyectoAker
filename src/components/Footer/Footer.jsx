@@ -36,7 +36,7 @@ export const Footer = () => {
           <hr />
           <p>
             Copyright
-            <b> Ovorex </b>- 2024. Todos los derechos reservados.
+            <b> Aker </b>- 2024. Todos los derechos reservados.
           </p>
         </div>
       </footer>
