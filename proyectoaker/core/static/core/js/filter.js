@@ -1,14 +1,16 @@
-    function applyFilter() {
+       function applyFilter() {
             const selectBox = document.getElementById('selectBox');
             const selectedValue = selectBox.value;
             const baseUrl = document.querySelector('.boxFilter').dataset.urlFilter;
 
+            const params = new URLSearchParams(window.location.search);
 
-            // Agrega el nuevo valor del selectBox
             if (selectedValue) {
-                 window.location.href = `${baseUrl}?selectBox=${selectedValue}`;
-            }else{
-                 window.location.href = baseUrl;
+                params.set('selectBox', selectedValue);
+            } else {
+                params.delete('selectBox');
             }
 
+            const newUrl = `${baseUrl}?${params.toString()}`;
+            window.location.href = newUrl;
         }
