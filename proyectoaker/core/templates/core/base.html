@@ -16,7 +16,9 @@
             crossorigin="anonymous"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="{% static 'style.css' %}"/>
+
     <title>Aker</title>
 </head>
 
@@ -105,17 +107,20 @@
         </div>
         <div class="boxCarro">
             <!-- Items  -->
+
         </div>
         <div class="buy">
             <button class="buttonBuy2" id="seguirComprando"> Seguir comprando</button>
-            <button class="buttonBuy"> Comprar</button>
+            <button class="buttonBuy" id="checkoutButton"> Comprar</button>
+            <button class="buttonBuy3" id="vaciarCarrito">Vaciar carrito</button>
+
+
         </div>
+        <div id="wallet_container"></div>
     </div>
 </div>
 
         <!-- -->
-
-
 
         </section>
 </main>
@@ -165,6 +170,8 @@
 
 <script src="{% static 'core/js/modal.js' %}"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 <script>
     AOS.init();
 </script>
@@ -179,157 +186,13 @@
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"
 ></script>
-
+<script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const modal = document.getElementById('ventanaModal');
-        const modalContent = modal.querySelector('.boxCarro');
-        const closeModal = modal.querySelector('.cerrar');
-        const seguirComprandoBtn = modal.querySelector('#seguirComprando');
-
-        function loadCart() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.forEach(item => {
-                const productHtml = `
-                    <div class="boxCarrito" data-id="${item.id}">
-                        <img src="${item.image}" class="imgCarrito"/>
-                        <p class="textCarrito">${item.name}</p>
-                        <div class="quantityCarrito">
-                            <label class="textQuantityCarrito">Cantidad</label>
-                            <input type="number" min="1" value="${item.quantity}" class="numberQuantityCarrito"/>
-                        </div>
-                        <p class="priceCarrito">${item.price}</p>
-                        <button class="remove-btn">Quitar</button>
-                    </div>
-                `;
-                modalContent.insertAdjacentHTML('beforeend', productHtml);
-            });
-            updateItemCountDisplay();
-        }
-
-        function saveCart(cart) {
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateItemCountDisplay();
-        }
-
-        function removeItemFromCart(productId) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart = cart.filter(item => item.id !== productId);
-            saveCart(cart);
-            document.querySelector(`.boxCarrito[data-id="${productId}"]`).remove();
-            updateItemCountDisplay();
-        }
-
-        function updateCartItemQuantity(productId, newQuantity) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const itemIndex = cart.findIndex(item => item.id === productId);
-            if (itemIndex !== -1) {
-                cart[itemIndex].quantity = newQuantity;
-                saveCart(cart);
-
-                // Actualizar cantidad en el DOM
-                const itemElement = document.querySelector(`.boxCarrito[data-id="${productId}"] .numberQuantityCarrito`);
-                if (itemElement) {
-                    itemElement.value = newQuantity;
-                }
-            }
-        }
-
-        function getItemCountInCart() {
-            const itemsInCart = document.querySelectorAll('.boxCarrito').length;
-            return itemsInCart;
-        }
-
-        function updateItemCountDisplay() {
-            const itemCount = getItemCountInCart();
-            const itemCountDisplay = document.getElementById('itemCountDisplay');
-            itemCountDisplay.textContent = `${itemCount}`;
-        }
-
-        updateItemCountDisplay();
-
-        document.querySelectorAll('.comprar-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const productId = this.getAttribute('data-id');
-                const productName = this.getAttribute('data-name');
-                const productPrice = this.getAttribute('data-price');
-                const productImage = this.getAttribute('data-image');
-
-                let cart = JSON.parse(localStorage.getItem('cart')) || [];
-                let existingProduct = cart.find(item => item.id === productId);
-
-                if (existingProduct) {
-                    // Si el producto ya está en el carrito, incrementa su cantidad
-                    existingProduct.quantity++;
-                    updateCartItemQuantity(productId, existingProduct.quantity);
-                } else {
-                    // Si el producto no está en el carrito, agrégalo con cantidad 1
-                    cart.push({
-                        id: productId,
-                        name: productName,
-                        price: productPrice,
-                        image: productImage,
-                        quantity: 1
-                    });
-                    saveCart(cart);
-                    console.log(existingProduct)
-
-                    // Insertar nuevo elemento en el DOM
-                    const productHtml = `
-                        <div class="boxCarrito" data-id="${productId}">
-                            <img src="${productImage}" class="imgCarrito"/>
-                            <p class="textCarrito">${productName}</p>
-                            <div class="quantityCarrito">
-                                <label class="textQuantityCarrito">Cantidad</label>
-                                <input type="number" min="1" value="1" class="numberQuantityCarrito"/>
-                            </div>
-                            <p class="priceCarrito">${productPrice}</p>
-                            <button class="remove-btn">Quitar</button>
-                        </div>
-                    `;
-                    modalContent.insertAdjacentHTML('beforeend', productHtml);
-
-                    // Añadir event listener al nuevo botón de quitar
-                    document.querySelector(`.boxCarrito[data-id="${productId}"] .remove-btn`).addEventListener('click', function () {
-                        removeItemFromCart(productId);
-                    });
-                }
-
-                updateItemCountDisplay();
-                //modal.style.display = 'block';
-            });
-        });
-
-        closeModal.addEventListener('click', function () {
-            modal.style.display = 'none';
-            updateItemCountDisplay();
-        });
-
-        seguirComprandoBtn.addEventListener('click', function () {
-            modal.style.display = 'none';
-            updateItemCountDisplay();
-        });
-
-        window.addEventListener('click', function (event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                updateItemCountDisplay();
-            }
-        });
-
-        loadCart();
-
-        // Add event listeners for remove buttons on page load
-        document.querySelectorAll('.remove-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const productId = this.closest('.boxCarrito').getAttribute('data-id');
-                removeItemFromCart(productId);
-            });
-        });
-    });
+    //////////////////////////////////////////////////
 </script>
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<script src="{% static 'core/js/filter.js' %}"></script>
+<script src="{% static 'core/js/mp.js' %}"></script>
+<script src="{% static 'core/js/cart.js' %}"></script>
 </body>
 </html>

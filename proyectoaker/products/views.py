@@ -10,6 +10,7 @@ from django.views.generic import (
 )
 
 
+
 #def category(request):
 # Obtener todas las categorías
 #       categorias = Category.objects.all()
@@ -26,6 +27,9 @@ class productsListView(ListView):
         context['products'] = Producto.objects.all()
 
         return context
+
+
+
 
 
 # Filtrado de productos por letras #
@@ -45,6 +49,7 @@ class productsListByKword(ListView):
 
         palabra_clave = self.request.GET.get("kword", '')
         categoria = self.request.GET.get("categoria", '')
+        selectBox = self.request.GET.get("selectBox", '')
 
         if palabra_clave:
             queryset = queryset.filter(
@@ -52,6 +57,16 @@ class productsListByKword(ListView):
 
         if categoria:
             queryset = queryset.filter(category__name__icontains=categoria)
+
+        if selectBox:
+            if selectBox == 'value1':
+                queryset = queryset.order_by('price')
+            elif selectBox == 'value2':
+                queryset = queryset.order_by('-price')
+            elif selectBox == 'value3':
+                queryset = queryset.order_by('title')
+            elif selectBox == 'value4':
+                queryset = queryset.order_by('-title')
 
         return queryset
 
@@ -87,3 +102,28 @@ class errorView(TemplateView):
         context['products'] = Producto.objects.all()
 
         return context
+
+
+
+# class productsFilter(ListView):
+#     template_name = "core/filter.html"
+#     context_object_name = "productos"
+#     model = Producto
+#
+#     def get_queryset(self):
+#         queryset = Producto.objects.all()
+#
+#         selectBox = self.request.GET.get("selectBox", '')
+#
+#
+#         if selectBox:
+#             if selectBox == 'value1':
+#                 queryset = queryset.order_by('-price')
+#             elif selectBox == 'value2':
+#                 queryset = queryset.order_by('price')
+#             elif selectBox == 'value3':
+#                 queryset = queryset.order_by('title')
+#             elif selectBox == 'value4':
+#                 queryset = queryset.order_by('-title')
+#
+#         return queryset

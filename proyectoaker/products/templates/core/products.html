@@ -7,19 +7,16 @@
 
     <div class="contenedorMaximo">
         <div class="filtro">
-            <div class="filtroContenedor">
-                <label class="textFiltro">Ordenar por: </label>
-                <div class="boxFilter">
-
-                    <select name="selectBox">
-                        <option>Seleccionar</option>
-                        <option value="value1">Precio Mayor a Menor</option>
-                        <option value="value2">Precio Menor a Mayor</option>
-                        <option value="value3">A-Z</option>
-                        <option value="value4">Z-A</option>
+           <div class="filtroContenedor">
+                   <label for="selectBox">Ordenar por:</label>
+                <div class="boxFilter" data-url-filter="{% url 'search-products' %}">
+                    <select name="selectBox" id="selectBox" onchange="applyFilter()">
+                        <option value="">Seleccionar</option>
+                        <option value="value1" {% if selected_option == 'value1' %}selected{% endif %}>Precio: Menor a Mayor</option>
+                        <option value="value2" {% if selected_option == 'value2' %}selected{% endif %}>Precio: Mayor a Menor</option>
+                        <option value="value3" {% if selected_option == 'value3' %}selected{% endif %}>A-Z</option>
+                        <option value="value4" {% if selected_option == 'value4' %}selected{% endif %}>Z-A</option>
                     </select>
-
-
                 </div>
             </div>
             <!-- Button trigger modal -->
